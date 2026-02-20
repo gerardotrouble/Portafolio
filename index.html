@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio de Blas Gerardo Santillann Neri — Desarrollador Web Front-End (Angular)." />
+  <title>Blas Gerardo Santillann Neri — Front-End</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- <a class="skip-link" href="#contenido">Saltar al contenido</a> -->
+
+  <!-- Fondo animado: pétalos oliva -->
+  <div class="petals" aria-hidden="true">
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Neri</span>
+        <span class="brand__role">Front-End</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Abrir menú</span>
+          <span class="nav__icon" aria-hidden="true"></span>
+        </button>
+
+        <div id="navMenu" class="nav__menu">
+          <a href="#proyectos">Proyectos</a>
+          <a href="#skills">Skills</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#educacion">Educación</a>
+
+          <button class="theme-toggle" id="themeToggle" type="button"
+                  aria-label="Cambiar a modo claro" aria-pressed="false">
+            <span class="theme-toggle__track" aria-hidden="true">
+              <span class="theme-toggle__thumb" aria-hidden="true"></span>
+            </span>
+            <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+<!--           <p class="kicker">
+            <span class="dot" aria-hidden="true"></span>
+            Tlalnepantla de Baz · Disponible para proyectos
+          </p> -->
+
+          <h1 class="hero__title">
+            Gerardo Santillan Neri
+            <span class="grad">Desarrollador Front-End</span>
+          </h1>
+
+          <p class="hero__text">
+            Desarrollo interfaces modernas con <strong>Angular</strong>, cuidando accesibilidad, performance y
+            mantenibilidad, clean code. Experiencia en e-commerce, dashboards de administración, mantenimiento y mejora continua.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--ghost" href="#experiencia">Ver experiencia</a>
+            <!-- <a class="btn btn--link" href="mailto:gerardosantillann@gmail.com">gerardosantillann@gmail.com</a> -->
+          </div>
+
+          <ul class="chips" aria-label="Tecnologías principales">
+            <li><span class="chip">Angular</span></li>
+            <li><span class="chip">TypeScript</span></li>
+            <li><span class="chip">JavaScript</span></li>
+            <li><span class="chip">HTML</span></li>
+            <li><span class="chip">CSS/SASS</span></li>
+            <li><span class="chip">Git</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero__card" aria-label="Tarjeta de contacto">
+          <div class="card">
+            <div class="card__top">
+              <div class="avatar" aria-hidden="true"><img src="./assets/img/dev.png" alt=""></div>
+              <div>
+                <p class="card__name">Neri</p>
+                <p class="card__meta">Front-End <!-- · Angular --></p>
+              </div>
+            </div>
+
+            <div class="stats" role="list">
+              <div class="stat" role="listitem">
+                <p class="stat__num">2018–2023</p>
+                <p class="stat__label">Freelance</p>
+              </div>
+              <div class="stat" role="listitem">
+                <p class="stat__num">2023</p>
+                <p class="stat__label">Conexus</p>
+              </div>
+              <div class="stat" role="listitem">
+                <p class="stat__num">2023-2025</p>
+                <p class="stat__label">Freelance</p>
+              </div>
+            </div>
+
+            <div class="links">
+              <a class="pill" href="mailto:gerardosantillann@gmail.com">gerardosantillann@gmail.com</a>
+              <a class="pill" href="tel:+525567673909">+52 55 6767 3909</a>
+              <!-- <span class="pill" aria-label="Ubicación">Tlalnepantla de Baz</span> -->
+            </div>
+
+            <p class="card__note">
+              Fortalezas: resolución de problemas, gestión de sitios web y actualización constante de frameworks.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Proyectos</h2>
+          <!-- <p class="section__desc">Reemplaza los ejemplos por tus proyectos reales (demo + repo).</p> -->
+        </div>
+
+        <div class="grid">
+          <article class="project">
+            <div class="project__cover">
+              <span class="project__badge">Bicicle - Js</span>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Pagina web</h3>
+              <p class="project__text">Landing de agencia creativa orientada a marketing experiencial y captación de leads.</p>
+              <ul class="project__list">
+                <li>Landing page corporativa</li>
+                <li>Diseño moderno y visual</li>
+                <li>Elementos interactivos/animaciones</li>
+              </ul>
+              <div class="project__actions">
+                <a class="btn btn--sm btn--primary" href="https://www.bicible.com.mx/" target="_blank" rel="noreferrer">Link</a>
+                <!-- <a class="btn btn--sm btn--ghost" href="#" target="_blank" rel="noreferrer">Código</a> -->
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__cover project__cover--alt">
+              <span class="project__badge">Angular · Sistema escolar</span>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Sistema de Gestión Escolar</h3>
+              <p class="project__text">Módulos de alumnos, grupos y reportes con arquitectura por features.</p>
+              <ul class="project__list">
+                <li>Rutas + guards</li>
+                <li>Formularios reactivos</li>
+                <li>Listados y filtros</li>
+              </ul>
+              <div class="project__actions">
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__cover project__cover--alt2">
+              <span class="project__badge">Maquetación Mails</span>
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Desarrollo de plantillas HTML</h3>
+              <h3 class="project__title">Maquetación responsive para clientes de correo</h3>
+              <ul class="project__list">
+                <li>Emails visuales adaptables a móvil y desktop</li>
+                <li>CSS inline optimizado para renderizado consistente</li>
+                <li>Templates de prueba</li>
+              </ul>
+              <div class="project__actions">
+                <a class="btn btn--sm btn--primary" href="/Mails/index.html" target="_blank" rel="noreferrer">Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__desc">Lenguajes, herramientas y fortalezas.</p>
+        </div>
+
+        <div class="panels">
+          <div class="panel">
+            <h3 class="panel__title">Frontend</h3>
+            <ul class="list">
+              <li>HTML, CSS, SASS</li>
+              <li>JavaScript, TypeScript</li>
+              <li>Angular</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel__title">Backend / Datos</h3>
+            <ul class="list">
+              <li>SQL</li>
+              <li>Java, PHP</li>
+              <li>C, C++</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel__title">Habilidades</h3>
+            <ul class="list">
+              <li>Resolución de problemas</li>
+              <li>Gestión de sitios web</li>
+              <li>Actualización constante de frameworks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Experiencia</h2>
+          <!-- <p class="section__desc">Enfoque en Angular y mantenimiento/mejoras.</p> -->
+        </div>
+
+        <div class="timeline">
+                    <article class="job">
+            <div class="job__dot" aria-hidden="true"></div>
+            <div class="job__content">
+              <div class="job__top">
+                <h3 class="job__title">Freelancer</h3>
+                <p class="job__time">2023 — 2025</p>
+              </div>
+              <ul class="job__list">
+                <li>Clases</li>
+                <li>Creación de sitios web.</li>
+                <li>Optimización de sitios web.</li>
+              </ul>
+              <p class="muted small">Tecnologías: HTML, SASS, Typescript, Angular.</p>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="job__dot" aria-hidden="true"></div>
+            <div class="job__content">
+              <div class="job__top">
+                <h3 class="job__title">CONEXUS ADVERTISING GROUP</h3>
+                <p class="job__time">2023</p>
+              </div>
+              <ul class="job__list">
+                <li>Desarrollo Front-End de E-commerce.</li>
+                <li>Dashboards de administrador.</li>
+                <li>Mantenimiento y mejoras de funcionalidades de sitios web.</li>
+                <li>Desarrollo de páginas web.</li>
+                <li>Brainstorming y asesoramiento creativo en licitaciones de nuevos clientes.</li>
+              </ul>
+              <p class="muted small">Lenguaje utilizado en los proyectos: Angular.</p>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="job__dot" aria-hidden="true"></div>
+            <div class="job__content">
+              <div class="job__top">
+                <h3 class="job__title">Freelancer</h3>
+                <p class="job__time">2018 — 2023</p>
+              </div>
+              <ul class="job__list">
+                <li>Creación de sitios web.</li>
+                <li>Sistema de gestión escolar.</li>
+                <li>E-commerce de venta de ropa.</li>
+                <li>Optimización de sitios web.</li>
+              </ul>
+              <p class="muted small">Tecnologías: HTML, CSS, SASS, JS, jQuery, Angular.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="educacion">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Educación & Certificaciones</h2>
+          <!-- <p class="section__desc">Separado en 2 tarjetas: educación y cursos/certificaciones.</p> -->
+        </div>
+
+        <div class="panels panels--2">
+          <div class="panel">
+            <h3 class="panel__title">Educación</h3>
+            <ul class="list">
+              <li><strong>IPN CIDETEC</strong> — Maestría en Tecnología de Cómputo (2021 — 2023)</li>
+              <li><strong>Universidad UCAD</strong> — Ingeniería en Sistemas Computacionales (2018 — 2021)</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel__title">Cursos / Certificaciones</h3>
+            <ul class="list">
+              <li>Angular de Cero a Experto – Fernando Herrera</li>
+              <li>Fundamentos de diseño de base de datos – IT Open Knowledge Center</li>
+              <li>Master en CSS: Responsive, SASS, Flexbox, Grid y Bootstrap – Udemy</li>
+              <li>Master en JavaScript: Aprender JS, jQuery, Angular</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted small">© <span id="year"></span> Blas Gerardo Santillann Neri</p>
+        <a class="muted small" href="#contenido">Volver arriba ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

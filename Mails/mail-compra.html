@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>Confirmación de compra</title>
+
+<style>
+@media (max-width:600px){
+  .container{width:100%!important}
+  .stack{display:block!important;width:100%!important}
+  .center{text-align:center!important}
+  .px{padding-left:16px!important;padding-right:16px!important}
+  .py{padding-top:16px!important;padding-bottom:16px!important}
+  .w100{width:100%!important}
+}
+@media (prefers-color-scheme: dark){
+  body,.bg{background:#0b1220!important}
+  .card{background:#0f1a2e!important}
+  .muted{color:#b9c1d1!important}
+  .text{color:#eef2ff!important}
+  .soft{background:#111f38!important}
+  .hr{border-color:#22314f!important}
+  .link{color:#8ab4ff!important}
+}
+[data-ogsc] body,[data-ogsc] .bg{background:#0b1220!important}
+[data-ogsc] .card{background:#0f1a2e!important}
+[data-ogsc] .muted{color:#b9c1d1!important}
+[data-ogsc] .text{color:#eef2ff!important}
+[data-ogsc] .soft{background:#111f38!important}
+[data-ogsc] .hr{border-color:#22314f!important}
+[data-ogsc] .link{color:#8ab4ff!important}
+</style>
+</head>
+
+<body class="bg" style="margin:0;background:#f4f6f8;font-family:Arial,Helvetica,sans-serif;">
+
+<!-- Preheader -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;mso-hide:all;">
+Confirmación de compra #{{orden}} • Total {{total}} • Gracias por tu compra.
+</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f6f8;">
+<tr>
+<td align="center" style="padding:20px 12px;">
+
+  <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;">
+    <!-- Header -->
+    <tr>
+      <td style="background:#072146;border-radius:12px 12px 0 0;padding:18px 24px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="stack center" style="vertical-align:middle;">
+              <img src=""
+                   width="160" height="40" alt="Tu Tienda"
+                   style="display:block;border:0;outline:none;text-decoration:none;">
+            </td>
+            <td class="stack center" align="right" style="vertical-align:middle;font-size:12px;color:#dbe5ff;">
+              Confirmación de compra
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Card -->
+    <tr>
+      <td class="card" style="background:#ffffff;border-radius:0 0 12px 12px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+          <!-- Title -->
+          <tr>
+            <td class="px" style="padding:26px 24px 8px 24px;">
+              <h1 class="text" style="margin:0;font-size:22px;line-height:1.25;color:#111827;">
+                Gracias por tu compra 🧾
+              </h1>
+              <p class="muted" style="margin:10px 0 0;font-size:14px;line-height:1.7;color:#4b5563;">
+                Hola <strong style="color:inherit;">{{nombre}}</strong>, tu pedido quedó confirmado.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Order summary -->
+          <tr>
+            <td class="px" style="padding:12px 24px 18px 24px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="soft" style="background:#f1f5f9;border-radius:10px;">
+                <tr>
+                  <td style="padding:14px 14px;font-size:13px;line-height:1.7;color:#374151;">
+                    <strong class="text" style="color:#111827;">Pedido #{{orden}}</strong><br>
+                    Fecha: {{fecha}}<br>
+                    Pago: {{pago}}<br>
+                    Envío a: {{direccion}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Products with images -->
+          <tr>
+            <td class="px" style="padding:0 24px 18px 24px;">
+              <p class="text" style="margin:0 0 10px 0;font-size:14px;color:#111827;font-weight:bold;">
+                Artículos
+              </p>
+
+              <!-- PRODUCT 1 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #e5e7eb;border-radius:10px;">
+                <tr>
+                  <td style="padding:12px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <!-- image -->
+                        <td width="88" style="width:88px;vertical-align:top;">
+                          <img src="{{img1}}" width="80" height="80" alt="{{producto1}}"
+                               style="width:80px;height:80px;border-radius:8px;display:block;">
+                        </td>
+
+                        <!-- info -->
+                        <td style="padding-left:12px;vertical-align:top;">
+                          <p class="text" style="margin:0;font-size:14px;line-height:1.4;color:#111827;font-weight:700;">
+                            {{producto1}}
+                          </p>
+                          <p class="muted" style="margin:6px 0 0;font-size:12px;line-height:1.5;color:#6b7280;">
+                            SKU: {{sku1}} • Cant: {{qty1}}
+                          </p>
+                        </td>
+
+                        <!-- price -->
+                        <td align="right" style="vertical-align:top;">
+                          <p class="text" style="margin:0;font-size:14px;color:#111827;font-weight:700;">
+                            {{precio1}}
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <div style="height:10px;line-height:10px;font-size:0;">&nbsp;</div>
+
+              <!-- PRODUCT 2 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #e5e7eb;border-radius:10px;">
+                <tr>
+                  <td style="padding:12px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="88" style="width:88px;vertical-align:top;">
+                          <img src="{{img2}}" width="80" height="80" alt="{{producto2}}"
+                               style="width:80px;height:80px;border-radius:8px;display:block;">
+                        </td>
+                        <td style="padding-left:12px;vertical-align:top;">
+                          <p class="text" style="margin:0;font-size:14px;line-height:1.4;color:#111827;font-weight:700;">
+                            {{producto2}}
+                          </p>
+                          <p class="muted" style="margin:6px 0 0;font-size:12px;line-height:1.5;color:#6b7280;">
+                            SKU: {{sku2}} • Cant: {{qty2}}
+                          </p>
+                        </td>
+                        <td align="right" style="vertical-align:top;">
+                          <p class="text" style="margin:0;font-size:14px;color:#111827;font-weight:700;">
+                            {{precio2}}
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Totals -->
+          <tr>
+            <td class="px" style="padding:0 24px 18px 24px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="muted" style="font-size:13px;color:#6b7280;padding:6px 0;">Subtotal</td>
+                  <td align="right" class="text" style="font-size:13px;color:#111827;padding:6px 0;">{{subtotal}}</td>
+                </tr>
+                <tr>
+                  <td class="muted" style="font-size:13px;color:#6b7280;padding:6px 0;">Envío</td>
+                  <td align="right" class="text" style="font-size:13px;color:#111827;padding:6px 0;">{{envio}}</td>
+                </tr>
+                <tr>
+                  <td class="muted" style="font-size:13px;color:#6b7280;padding:6px 0;">Impuestos</td>
+                  <td align="right" class="text" style="font-size:13px;color:#111827;padding:6px 0;">{{impuestos}}</td>
+                </tr>
+                <tr>
+                  <td style="border-top:1px solid #e5e7eb;padding:10px 0;font-weight:700;" class="text">Total</td>
+                  <td align="right" style="border-top:1px solid #e5e7eb;padding:10px 0;font-weight:700;" class="text">
+                    {{total}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- CTA -->
+          <tr>
+            <td align="center" class="px" style="padding:6px 24px 22px 24px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="w100">
+                <tr>
+                  <td bgcolor="#072146" style="border-radius:8px;" align="center">
+                    <a href="{{linkPedido}}" target="_blank"
+                       style="display:inline-block;padding:14px 22px;color:#ffffff;font-size:15px;font-weight:700;">
+                      Ver mi pedido
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              <p class="muted" style="margin:10px 0 0;font-size:12px;color:#6b7280;line-height:1.6;">
+                Si el botón no funciona: <span class="link" style="color:#072146;word-break:break-all;">{{linkPedido}}</span>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr><td class="px" style="padding:0 24px;"><hr class="hr" style="border:none;border-top:1px solid #e5e7eb;margin:0;"></td></tr>
+          <tr>
+            <td class="px" style="padding:16px 24px 24px 24px;">
+              <p class="muted" style="margin:0;font-size:11px;line-height:1.6;color:#6b7280;text-align:center;">
+                © {{year}} Tu Tienda •
+                <a class="link" href="{{linkAyuda}}" style="color:#072146;">Soporte</a> •
+                <a class="link" href="{{linkPrivacidad}}" style="color:#072146;">Privacidad</a><br>
+                No respondas a este correo. Nunca te pediremos tu contraseña por email.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

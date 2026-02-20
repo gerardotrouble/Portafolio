@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <title>Notificación Bancaria</title>
+
+  <style>
+    /* ====== Resets / Base ====== */
+    html, body { margin:0 !important; padding:0 !important; height:100% !important; width:100% !important; }
+    * { -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; }
+    table, td { mso-table-lspace:0pt !important; mso-table-rspace:0pt !important; border-collapse:collapse !important; }
+    img { -ms-interpolation-mode:bicubic; border:0; outline:none; text-decoration:none; display:block; }
+    a { text-decoration:none; }
+    .preheader { display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; overflow:hidden; mso-hide:all; }
+    .container { width:600px; max-width:600px; }
+
+    /* ====== Fluid hybrid ====== */
+    @media screen and (max-width: 620px) {
+      .container { width:100% !important; max-width:100% !important; }
+      .px { padding-left:16px !important; padding-right:16px !important; }
+      .py { padding-top:16px !important; padding-bottom:16px !important; }
+      .stack { display:block !important; width:100% !important; }
+      .center { text-align:center !important; }
+      .btn { width:100% !important; }
+      .btn a { display:block !important; }
+      .hide-sm { display:none !important; }
+      .r { border-radius:0 !important; }
+    }
+
+    /* ====== Dark mode (Apple Mail / iOS / some clients) ====== */
+    @media (prefers-color-scheme: dark) {
+      body, .bg { background:#0b1220 !important; }
+      .card { background:#0f1a2e !important; }
+      .muted { color:#b9c1d1 !important; }
+      .text { color:#eef2ff !important; }
+      .hr { border-color:#22314f !important; }
+      .soft { background:#111f38 !important; }
+      .link { color:#8ab4ff !important; }
+    }
+
+    /* ====== Gmail iOS / others (best-effort) ====== */
+    [data-ogsc] body, [data-ogsc] .bg { background:#0b1220 !important; }
+    [data-ogsc] .card { background:#0f1a2e !important; }
+    [data-ogsc] .muted { color:#b9c1d1 !important; }
+    [data-ogsc] .text { color:#eef2ff !important; }
+    [data-ogsc] .hr { border-color:#22314f !important; }
+    [data-ogsc] .soft { background:#111f38 !important; }
+    [data-ogsc] .link { color:#8ab4ff !important; }
+  </style>
+</head>
+
+<body class="bg" style="background:#f4f6f8; margin:0; padding:0;">
+  <!-- Preheader (visible en inbox preview, oculto en body) -->
+  <div class="preheader">
+    Detectamos un movimiento reciente en tu cuenta. Revisa el detalle y confirma si lo reconoces.
+  </div>
+
+  <!-- Wrapper -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f6f8;">
+    <tr>
+      <td align="center" style="padding:24px 12px;">
+
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
+          <!-- Top spacer -->
+          <tr><td style="height:8px; line-height:8px; font-size:0;">&nbsp;</td></tr>
+
+          <!-- Header -->
+          <tr>
+            <td class="r" style="background:#072146; border-radius:12px 12px 0 0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="px py" style="padding:18px 28px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td class="stack center" align="left" style="vertical-align:middle;">
+                          <!-- Logo: evita SVG (Outlook), usa PNG -->
+                          <img src=""
+                               width="160" height="40" alt="Banco" style="width:160px; height:40px;" />
+                        </td>
+                        <td class="stack center muted" align="right" style="vertical-align:middle; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#dbe5ff;">
+                          Notificación de seguridad
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Body card -->
+          <tr>
+            <td class="card" style="background:#ffffff; border-radius:0 0 12px 12px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <!-- Title -->
+                <tr>
+                  <td class="px" style="padding:28px 28px 10px 28px; font-family:Arial,Helvetica,sans-serif;">
+                    <h1 class="text" style="margin:0; font-size:22px; line-height:1.25; color:#072146; font-weight:700;">
+                      Revisa tu actividad reciente
+                    </h1>
+                  </td>
+                </tr>
+
+                <!-- Intro -->
+                <tr>
+                  <td class="px" style="padding:0 28px 18px 28px; font-family:Arial,Helvetica,sans-serif;">
+                    <p class="muted" style="margin:0; font-size:14px; line-height:1.7; color:#4b5563;">
+                      Hola <strong style="color:inherit;">Cain</strong>, detectamos un movimiento en tu cuenta.
+                      Si lo reconoces, no necesitas hacer nada. Si no lo reconoces, revisa y repórtalo de inmediato.
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Info block -->
+                <tr>
+                  <td class="px" style="padding:0 28px 18px 28px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="soft" style="background:#f1f5f9; border-radius:10px;">
+                      <tr>
+                        <td style="padding:16px 16px; font-family:Arial,Helvetica,sans-serif;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td class="text" style="font-size:13px; color:#111827; font-weight:700; padding-bottom:10px;">
+                                Detalle de operación
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td style="font-family:Arial,Helvetica,sans-serif;">
+                                <!-- “Tabla” de detalles compatible -->
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                  <tr>
+                                    <td class="muted" style="font-size:13px; color:#4b5563; padding:6px 0; width:35%;">Monto</td>
+                                    <td class="text"  style="font-size:13px; color:#111827; padding:6px 0; font-weight:700;">$2,450.00 MXN</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="muted" style="font-size:13px; color:#4b5563; padding:6px 0;">Fecha</td>
+                                    <td class="text"  style="font-size:13px; color:#111827; padding:6px 0;">19 Feb 2026 • 17:40</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="muted" style="font-size:13px; color:#4b5563; padding:6px 0;">Cuenta</td>
+                                    <td class="text"  style="font-size:13px; color:#111827; padding:6px 0;">**** 4589</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="muted" style="font-size:13px; color:#4b5563; padding:6px 0;">Ubicación</td>
+                                    <td class="text"  style="font-size:13px; color:#111827; padding:6px 0;">Ciudad de México</td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- CTA (VML bulletproof for Outlook) -->
+                <tr>
+                  <td class="px" align="center" style="padding:4px 28px 20px 28px;">
+
+                    <table role="presentation" class="btn" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
+                      <tr>
+                        <td align="center" bgcolor="#072146" style="border-radius:6px;">
+                          <a href="#" target="_blank"
+                             style="display:inline-block; padding:14px 22px; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:700; color:#ffffff;">
+                            Revisar movimiento
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                    <!--<![endif]-->
+                  </td>
+                </tr>
+
+                <!-- Secondary text -->
+                <tr>
+                  <td class="px" style="padding:0 28px 18px 28px; font-family:Arial,Helvetica,sans-serif;">
+                    <p class="muted" style="margin:0; font-size:12px; line-height:1.6; color:#6b7280;">
+                      Si el botón no funciona, copia y pega este enlace en tu navegador:
+                      <span class="link" style="color:#072146; word-break:break-all;">#</span>
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Divider -->
+                <tr>
+                  <td class="px" style="padding:0 28px;">
+                    <hr class="hr" style="border:none; border-top:1px solid #e5e7eb; margin:0;" />
+                  </td>
+                </tr>
+
+                <!-- Security tips -->
+                <tr>
+                  <td class="px" style="padding:18px 28px; font-family:Arial,Helvetica,sans-serif;">
+                    <p class="text" style="margin:0 0 8px 0; font-size:13px; color:#111827; font-weight:700;">
+                      Consejos de seguridad
+                    </p>
+                    <ul class="muted" style="margin:0; padding-left:18px; font-size:12px; line-height:1.7; color:#6b7280;">
+                      <li>No compartas códigos SMS, token o contraseñas.</li>
+                      <li>Verifica siempre el dominio del sitio antes de iniciar sesión.</li>
+                      <li>Si sospechas fraude, reporta desde tu app o canal oficial.</li>
+                    </ul>
+                  </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                  <td class="px" style="padding:0 28px 24px 28px; font-family:Arial,Helvetica,sans-serif;">
+                    <p class="muted" style="margin:0; font-size:11px; line-height:1.6; color:#6b7280; text-align:center;">
+                      Este correo fue enviado automáticamente, por favor no respondas.<br/>
+                      © 2026 Banco Corporativo •
+                      <a class="link" href="#/privacidad" style="color:#072146;">Privacidad</a> •
+                      <a class="link" href="#/ayuda" style="color:#072146;">Ayuda</a>
+                    </p>
+
+                    <!-- (Opcional) List-Unsubscribe: se configura en headers del proveedor --> <!-- importante -->
+                    <!-- List-Unsubscribe: <mailto:unsubscribe@tu-dominio.com?subject=unsubscribe>, <https://tu-dominio.com/unsubscribe> -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Bottom spacer -->
+          <tr><td style="height:10px; line-height:10px; font-size:0;">&nbsp;</td></tr>
+
+          <!-- Legal tiny -->
+          <tr>
+            <td class="muted" style="font-family:Arial,Helvetica,sans-serif; font-size:10px; line-height:1.6; color:#8a93a3; text-align:center; padding:0 10px;">
+              Si no solicitaste esta notificación, ignórala. Nunca te pediremos tu contraseña por correo.
+            </td>
+          </tr>
+
+        </table>
+
+    </tr>
+  </table>
+</body>
+</html>

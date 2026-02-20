@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Templates</title>
+  <style>
+    :root{
+      --bg:#0b0f0c;
+      --panel:#0f1511;
+      --border:#1f2b22;
+      --text:#e9efe9;
+      --muted:#b7c2b7;
+      --accent:#6b7f43; /* verde olivo */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .app{min-height:100vh;display:flex;flex-direction:column}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,15,12,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    .bar{max-width:1200px;margin:0 auto;padding:12px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .title{font-weight:700;letter-spacing:.2px}
+    .spacer{flex:1}
+    select,button,a.btn{
+      border:1px solid var(--border);
+      background:var(--panel);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      font-size:14px;
+      line-height:1;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    select{padding-right:36px}
+    button:hover,a.btn:hover{border-color:rgba(107,127,67,.7)}
+    button:focus,select:focus,a.btn:focus{outline:2px solid rgba(107,127,67,.5);outline-offset:2px}
+    .primary{background:linear-gradient(180deg, rgba(107,127,67,.35), rgba(107,127,67,.18));border-color:rgba(107,127,67,.65)}
+    .hint{color:var(--muted);font-size:13px}
+    main{flex:1;display:flex}
+    .frameWrap{flex:1;max-width:1200px;margin:0 auto;padding:16px;width:100%}
+    iframe{width:100%;height:calc(100vh - 86px);border:1px solid var(--border);border-radius:16px;background:#fff}
+    @media (max-width:640px){
+      iframe{height:calc(100vh - 132px)}
+      .title{width:100%}
+      .spacer{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="bar">
+        <div class="title"></div>
+        <div class="hint" id="counter"></div>
+        <div class="spacer"></div>
+
+        <select id="templateSelect" aria-label="Seleccionar template"></select>
+        <button id="prevBtn" type="button">⟵ Anterior</button>
+        <button id="nextBtn" type="button" class="primary">Siguiente ⟶</button>
+        <a class="btn" id="openBtn" href="#" target="_blank" rel="noopener">Abrir en pestaña</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="frameWrap">
+        <iframe id="preview" title="Vista previa"></iframe>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Lista de templates (ajusta aquí si agregas más)
+    const templates = [
+      { id: 'mail-envio', label: 'Envío', file: 'mail-envio.html', primary: true},
+      { id: 'mail-compra', label: 'Compra', file: 'mail-compra.html' },
+      { id: 'mail-banco', label: 'Banco', file: 'mail-banco.html' },
+      { id: 'mail-departamental', label: 'Departamental', file: 'mail-departamental.html' },
+    ];
+
+    const selectEl = document.getElementById('templateSelect');
+    const frameEl = document.getElementById('preview');
+    const counterEl = document.getElementById('counter');
+    const openBtn = document.getElementById('openBtn');
+
+    const params = new URLSearchParams(location.search);
+    const initialId = params.get('t');
+
+    // Render options
+    templates.forEach(t => {
+      const opt = document.createElement('option');
+      opt.value = t.id;
+      opt.textContent = t.label;
+      selectEl.appendChild(opt);
+    });
+
+    function indexById(id){
+      const idx = templates.findIndex(t => t.id === id);
+      return idx >= 0 ? idx : templates.findIndex(t => t.primary) || 0;
+    }
+
+    function setTemplateByIndex(i, pushState = true){
+      const t = templates[(i + templates.length) % templates.length];
+      selectEl.value = t.id;
+      frameEl.src = t.file;
+      counterEl.textContent = `${templates.indexOf(t) + 1} / ${templates.length}`;
+      openBtn.href = t.file;
+
+      if(pushState){
+        const url = new URL(location.href);
+        url.searchParams.set('t', t.id);
+        history.replaceState(null, '', url);
+      }
+    }
+
+    // Init
+    setTemplateByIndex(indexById(initialId), false);
+
+    selectEl.addEventListener('change', () => setTemplateByIndex(indexById(selectEl.value)));
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      setTemplateByIndex(indexById(selectEl.value) + 1);
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      setTemplateByIndex(indexById(selectEl.value) - 1);
+    });
+
+    // Teclas ← →
+    window.addEventListener('keydown', (e) => {
+      if(e.key === 'ArrowRight') setTemplateByIndex(indexById(selectEl.value) + 1);
+      if(e.key === 'ArrowLeft') setTemplateByIndex(indexById(selectEl.value) - 1);
+    });
+  </script>
+</body>
+</html>
